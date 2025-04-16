@@ -1,0 +1,11 @@
+Gender,Married,Dependents,Education,Self_Employed,ApplicantIncome,CoapplicantIncome,LoanAmount,Loan_Amount_Term,Credit_History,Property_Area,Prediction,Confidence
+Male,Yes,0,Graduate,Yes,5000,0,410,360.0,0.0,Urban,❌ Rejected,1e-04
+Male,Yes,0,Graduate,Yes,27000,0,410,360.0,0.0,Urban,❌ Rejected,0.0002
+Male,Yes,2,Graduate,Yes,27000,0,410,360.0,0.0,Urban,❌ Rejected,0.0002
+Male,Yes,2,Graduate,Yes,27000,15000,170,360.0,1.0,Urban,✅ Approved,0.9999
+Male,Yes,2,Graduate,Yes,27000,15000,560,360.0,1.0,Urban,❌ Rejected,0.0
+Male,Yes,2,Graduate,Yes,27000,15000,560,60.0,1.0,Urban,❌ Rejected,0.0
+Male,Yes,0,Graduate,Yes,5000,0,100,1,1.0,Urban,✅ Approved,1.0
+Male,Yes,0,Graduate,Yes,5000,0,100,6,1.0,Urban,✅ Approved,1.0
+Male,Yes,0,Graduate,Yes,5000,0,100,6,0.0,Urban,❌ Rejected,0.0002
+Male,Yes,0,Graduate,Yes,5000,0,100,1,1.0,Urban,✅ Approved,1.0
