@@ -4,8 +4,8 @@ import joblib
 import os
 
 # Load model and training data structure
-model = joblib.load("../model/loan_approval_xgboost_model.joblib")
-df = pd.read_csv("../model/data.csv")
+model = joblib.load("./loan_approval_xgboost_model.joblib")
+df = pd.read_csv("./data.csv")
 X_columns = pd.get_dummies(df.drop(columns=["Loan_Status", "Applicant_ID"]), drop_first=True).columns
 
 # Page Config
