@@ -1,15 +1,27 @@
 from flask import Flask, request, jsonify
 import joblib
 import pandas as pd
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Load trained model
-model = joblib.load("../model/loan_approval_xgboost_model.joblib")
+try:
+    model = joblib.load("../model/loan_approval_xgboost_model.joblib")
+    print("Model loaded successfully.")
+except Exception as e:
+    model = None
+    print(f"Error loading model: {e}")
 
 # Load column structure from training data
-df = pd.read_csv("../model/data.csv")
-X_columns = pd.get_dummies(df.drop(columns=["Loan_Status", "Applicant_ID"]), drop_first=True).columns
+try:
+    df = pd.read_csv("../model/data.csv")
+    X_columns = pd.get_dummies(df.drop(columns=["Loan_Status", "Applicant_ID"]), drop_first=True).columns
+    print("Data columns loaded successfully.")
+except Exception as e:
+    X_columns = pd.Index([])
+    print(f"Error loading columns: {e}")
 
 @app.route("/")
 def home():
@@ -17,11 +29,12 @@ def home():
 
 @app.route("/predict", methods=["POST"])
 def predict():
-    try:
-        # JSON input from user
-        input_data = request.get_json()
+    if model is None or X_columns.empty:
+        return jsonify({"error": "Model or data columns not loaded properly."})
 
-        # Convert to DataFrame
+    try:
+        # JSON input from Postman
+        input_data = request.get_json()
         input_df = pd.DataFrame([input_data])
 
         # One-hot encode and align with training columns
