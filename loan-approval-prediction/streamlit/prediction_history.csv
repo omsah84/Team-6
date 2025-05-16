@@ -9,3 +9,10 @@ Male,Yes,0,Graduate,Yes,5000,0,100,1,1.0,Urban,✅ Approved,1.0
 Male,Yes,0,Graduate,Yes,5000,0,100,6,1.0,Urban,✅ Approved,1.0
 Male,Yes,0,Graduate,Yes,5000,0,100,6,0.0,Urban,❌ Rejected,0.0002
 Male,Yes,0,Graduate,Yes,5000,0,100,1,1.0,Urban,✅ Approved,1.0
+Male,Yes,0,Graduate,Yes,5000,0,100,1,1.0,Urban,✅ Approved,1.0
+Male,Yes,0,Graduate,Yes,5000,0,100,1,1.0,Urban,✅ Approved,1.0
+Male,Yes,0,Graduate,Yes,78000,0,100,1,1.0,Urban,✅ Approved,1.0
+Male,Yes,0,Graduate,Yes,78000,0,100,1,0.0,Urban,❌ Rejected,1e-04
+Male,Yes,0,Graduate,Yes,5000,0,100,1,0.0,Urban,❌ Rejected,0.0002
+Male,Yes,0,Graduate,Yes,5000,0,100,6,0.0,Semiurban,❌ Rejected,0.0002
+Female,Yes,0,Graduate,Yes,5000,0,100,6,1.0,Semiurban,✅ Approved,1.0
